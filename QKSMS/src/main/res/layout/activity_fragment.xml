@@ -20,8 +20,8 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="8dp"
-            />
-        <!--android:background="@drawable/ab_shadow"-->
+            android:background="@drawable/ab_shadow" />
+
     </FrameLayout>
 
 </LinearLayout>
