@@ -234,7 +234,9 @@ public class TransactionService extends Service implements Observer {
         mobileDataEnabled = Utils.isMobileDataEnabled(this);
         mConnMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         if (!mobileDataEnabled) {
-            Utils.setMobileDataEnabled(this, true);
+//            Utils.setMobileDataEnabled(this, true);
+
+            Utils.setMobileDataEnabled(getApplicationContext(), true);
         }
         if (mConnMgr == null) {
             endMmsConnectivity();
@@ -452,7 +454,7 @@ public class TransactionService extends Service implements Observer {
 
         if (!mobileDataEnabled) {
         if (LOCAL_LOGV) Log.v(TAG, "disabling mobile data");
-            Utils.setMobileDataEnabled(TransactionService.this, false);
+            Utils.setMobileDataEnabled(getApplicationContext(), false);
         }
     }
 

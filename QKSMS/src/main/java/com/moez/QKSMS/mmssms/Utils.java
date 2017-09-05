@@ -247,12 +247,13 @@ public class Utils {
                 iConnectivityManagerField.setAccessible(true);
                 Object iConnectivityManager = iConnectivityManagerField.get(conman);
                 Class iConnectivityManagerClass = Class.forName(iConnectivityManager.getClass().getName());
+
                 Method setMobileDataEnabledMethod = iConnectivityManagerClass.getDeclaredMethod("setMobileDataEnabled", Boolean.TYPE);
                 setMobileDataEnabledMethod.setAccessible(true);
-
                 setMobileDataEnabledMethod.invoke(iConnectivityManager, enabled);
+
             } catch (Exception e) {
-                Log.e(TAG, "exception thrown", e);
+                Log.e(TAG, "exception thrown==>", e);
             }
         }
 
