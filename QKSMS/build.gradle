@@ -123,7 +123,8 @@ dependencies {
 
     // Google libraries
     compile 'com.android.support:multidex:1.0.1'
-    compile 'com.android.support:appcompat-v7:22.2.1'
+    //compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.android.support:appcompat-v7:v.23.2.0'
     compile 'com.android.support:support-v13:25.3.1'
     compile 'com.android.support:recyclerview-v7:25.3.1'
     withAnalyticsCompile 'com.google.android.gms:play-services-analytics:8.3.0'
